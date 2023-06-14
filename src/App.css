@@ -92,6 +92,6 @@ button{
   border-bottom: 1px solid #ccc;
 }
 
-h1{
+form.login h1, form.register h1{
   text-align: center;
 }
