@@ -1,16 +1,24 @@
-export default function Post(){
+/* eslint-disable no-template-curly-in-string */
+import {formatISO9075} from "date-fns";
+import { Link } from "react-router-dom";
+export default function Post({_id,title,summary,cover,content,createdAt,author}){
+    console.log(_id);
     return (
         <div className="post">
             <div className="image">
-                <img src="https://avatars.githubusercontent.com/u/96141079?v=4" alt="" />
+            <Link to={`/post/${_id}`}>
+                <img src={'http://localhost:4000/'+cover} alt="" />
+            </Link>
             </div>
         <div className="texts">
-            <h2>jbvhbvjbs,bjsnbbxc,bb vbhbvxcb</h2>
+            <Link to={`/post/${_id}`}>
+                <h2>{title} </h2>
+            </Link>
             <p className="info">
-            <a className="author">Priyanshu Gupta</a>
-            <time>2023-06-12 10:16</time>
+            <a className = "author">{author.username}   </a>
+            <time>{formatISO9075(new Date(createdAt))}</time>
             </p>
-            <p className="summary">jbhbhxbhjxbhdbhzxbchbhjghd fbb</p>
+            <p className="summary">{summary}</p>
         </div>
         </div>
     );
