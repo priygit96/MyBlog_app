@@ -1,6 +1,9 @@
 *{
   box-sizing: border-box;
 }
+a{
+  cursor: pointer;
+}
 body{
   color: #222;
 }
@@ -86,13 +89,14 @@ input{
   margin-bottom: 5px;
   width: 100%;
   padding: 5px 7px;
-  border: 0;
   background-color: #eee;
   border-radius: 5px;
   border-bottom: 1px solid #ccc;
+  border: 2px solid #ddd;
 }
 
 button{
+  cursor: pointer;
   display: block;
   margin-bottom: 5px;
   width: 100%;
@@ -134,6 +138,7 @@ div.post-page time{
   display:block;
   font-size: .7rem;
   color:#aaa;
+  margin: 10px 0;
 }
 
 div.post-page div.author{
@@ -142,4 +147,30 @@ div.post-page div.author{
   font-size: .7rem;
   font-weight: bold;
 }
- 
+
+div.content p{
+  line-height: 1.7rem;
+  margin: 30px 0;
+}
+div.content li{
+  margin-bottom: 10px;
+}
+
+div.edit-row{
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn{
+  background-color: #6e6969;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+a svg{
+  height: 15px;
+}
